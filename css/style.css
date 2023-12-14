@@ -20,12 +20,12 @@ body{
 
 #sidebar{
     min-width: 350px;
-    /* debug */
-    background-color: beige;
+    height: 100%;
 }
 
 #chat-section{
     flex-grow: 1;
+    height: 100%;
 }
 
 /* sidebar stili */
@@ -60,4 +60,104 @@ body{
 .user-icons{
     padding: 3px;
     color: #b1b1b1;
+}
+
+/* spam notifiche nuovi messaggi */
+.new-message-notifications{
+    background-color: #8edafc;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.fa-bell-slash{
+    color: #8edafc;
+    background-color: white;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+.notifications-message{
+    padding-left: 5px;
+    font-size: 10px;
+}
+
+.notifications-message span{
+    display: block;
+    font-size: 12px;
+}
+
+#notifications{
+    text-decoration: underline;
+    color: gray;
+}
+
+/* form section */
+.ms_container-fluid{
+    background-color: #f7f3f3;
+    --bs-gutter-x: 1rem;
+    padding-right: 0;
+}
+
+.ms_form{
+    padding: 3px;
+    font-size: 12px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.ms_form-icon{
+    font-size: 12px;
+    color: lightgray;
+    background-color: white;
+    border-radius: 5px 0 0 5px;
+    padding: 6px 15px;
+    margin-top: 5px;
+}
+
+/* chats */
+.chat-user-container{
+    overflow-y: auto;
+    height: calc(100% - 140px);
+}
+
+.chat-user{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+
+.friend-chat{
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-friend-container{
+    width: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.img-friend-container img{
+    width: 100%;
+    background-color: #dddbdb;
+}
+
+.friend{
+    padding-left: 15px;
+}
+
+.friend-name{
+    font-size: 15px;
+}
+
+.last-message, .time-friend-chat{
+    color: gray;
+    line-height: 12px;
+    font-size: 10px;
 }
