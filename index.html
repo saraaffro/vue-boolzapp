@@ -27,7 +27,7 @@
                     <div class="user-account">
                         <div class="user-account-information">
                             <div class="img-user-account-container">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa8Luglga9J2R3Bxt_PsWZISUHQWODD6_ZTAJ5mIQgxYCAE-YbkY81faTqp-hSA_jVPTs&usqp=CAU" alt="">
+                                <img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/female1-256.png" alt="user-img">
                             </div>
                             <span>Sara</span>
                         </div>
@@ -59,7 +59,7 @@
 
                     <!-- chat user -->
                     <div class="chat-user-container">
-                        <div class="chat-user" v-for="(chat, i) in contacts">
+                        <div class="chat-user" v-for="(chat, i) in contacts" @click="goToChat(i)">
                             <div class="friend-chat">
                                 <div class="img-friend-container">
                                     <img :src="chat.avatar" :alt="chat.name">
@@ -201,11 +201,11 @@
                     <div class="header-int-chat">
                         <div class="friend-header">
                             <div class="img-friend-container">
-                                <img src="https://cdn.icon-icons.com/icons2/2468/PNG/512/user_icon_149329.png" alt="">
+                                <img :src="contacts[activeContact].avatar" alt="">
                             </div>
                             <div class="friend">
                                 <div class="friend-name">
-                                    Michele
+                                    {{contacts[activeContact].name}}
                                 </div>
                                 <div class="last-message">
                                     Ultimo accesso oggi alle 12:00
@@ -223,11 +223,8 @@
                     <!-- main chat section -->
                     <div class="main-chat-section">
                         <div class="messages-container">
-                            <div class="message send">Hai portato il cane?
-                                <span class="text-time">15:20</span>
-                            </div>
-                            <div class="message received">Certo
-                                <span class="text-time">15:20</span>
+                            <div class="message" v-for="(message, i) in contacts[activeContact].messages" :key="i" :class="message.status === 'sent' ? 'send' : ''">{{message.message}}
+                                <span class="text-time">{{message.date}}</span>
                             </div>
                         </div>
                     </div>

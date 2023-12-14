@@ -3,10 +3,11 @@ const {createApp} = Vue;
 createApp({
     data(){
         return{
+            activeContact: 0,
             contacts: [
                 {
-                    name: 'Michele',
-                    avatar: 'img/avatar_1.jpg',
+                    name: 'Papà',
+                    avatar: 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/3_avatar-256.png',
                     visible: true,
                     messages: [
                         {
@@ -27,8 +28,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Fabio',
-                    avatar: './img/avatar_2.jpg',
+                    name: 'Matteo',
+                    avatar: 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/8_avatar-256.png',
                     visible: true,
                     messages: [
                         {
@@ -49,8 +50,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Samuele',
-                    avatar: './img/avatar_3.jpg',
+                    name: 'Giulia',
+                    avatar: 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/11_avatar-1024.png',
                     visible: true,
                     messages: [
                         {
@@ -71,8 +72,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Alessandro B.',
-                    avatar: './img/avatar_4.jpg',
+                    name: 'Natti',
+                    avatar: 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/2_avatar-256.png',
                     visible: true,
                     messages: [
                         {
@@ -88,8 +89,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Alessandro L.',
-                    avatar: './img/avatar_3.jpg',
+                    name: 'Laura',
+                    avatar: 'https://creazilla-store.fra1.digitaloceanspaces.com/icons/7914838/woman-icon-md.png',
                     visible: true,
                     messages: [
                         {
@@ -105,8 +106,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Claudia',
-                    avatar: './img/avatar_2.jpg',
+                    name: 'Milena',
+                    avatar: 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/9_avatar-1024.png',
                     visible: true,
                     messages: [
                         {
@@ -127,8 +128,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Federico',
-                    avatar: './img/avatar_4.jpg',
+                    name: 'Enrico',
+                    avatar: 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/10_avatar-256.png',
                     visible: true,
                     messages: [
                         {
@@ -144,8 +145,8 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Davide',
-                    avatar: './img/avatar_1.jpg',
+                    name: 'Mamma',
+                    avatar: 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/5_avatar-256.png',
                     visible: true,
                     messages: [
                         {
@@ -170,7 +171,9 @@ createApp({
         }
     },
     methods:{
-
+        goToChat(i){
+            this.activeContact = i;
+        }
     },
     mounted(){
 

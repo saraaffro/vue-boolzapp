@@ -152,7 +152,6 @@ body{
 
 .img-friend-container img{
     width: 100%;
-    background-color: #dddbdb;
 }
 
 .friend{
@@ -220,12 +219,13 @@ body{
 
 .message{
     max-width: 40%;
-    padding: 12px;
+    padding: 15px;
     font-size: 12px;
     background-color: white;
     margin-bottom: 10px;
     border-radius: 10px;
     position: relative;
+    padding-bottom: 20px;
 }
 
 .message.send{
