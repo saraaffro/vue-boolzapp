@@ -27,3 +27,37 @@ body{
 #chat-section{
     flex-grow: 1;
 }
+
+/* sidebar stili */
+.user-account{
+    background-color: #f7f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-user-account-container{
+    border-radius: 50%;
+    overflow: hidden;
+    width: 40px;
+    margin: 5px;
+}
+
+.user-account-information{
+    display: flex;
+    align-items: center;
+}
+
+.user-account img{
+    width: 100%;
+    margin-bottom: -5px;
+}
+
+.icons-container-user-section{
+    margin-right: 10px;
+}
+
+.user-icons{
+    padding: 3px;
+    color: #b1b1b1;
+}
