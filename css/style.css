@@ -1,0 +1,29 @@
+/* stili generali */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* debug */
+    background-color: aqua;
+}
+
+#container{
+    background-color: white;
+    width: 90%;
+    margin: 20px auto;
+    height: calc(100vh - 40px);
+    display: flex;
+}
+
+#sidebar{
+    min-width: 350px;
+    /* debug */
+    background-color: beige;
+}
+
+#chat-section{
+    flex-grow: 1;
+}
