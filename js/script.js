@@ -24,6 +24,11 @@ createApp({
                 message: "",
                 status: "sent"
             },
+            newResponse: {
+                date: dataOdierna(),
+                message: "Ok",
+                status: "received"
+            },
             contacts: [
                 {
                     name: 'Papà',
@@ -196,8 +201,15 @@ createApp({
         },
         showNewMessage(){
             this.newMessage.date = dataOdierna();
-            this.contacts[this.activeContact].messages.push({...this.newMessage});
+
+            const activeContact = this.contacts[this.activeContact];
+            activeContact.messages.push({...this.newMessage});
             this.newMessage.message = "";
+
+            // nuovo messaggio dopo 1 secondo
+            setTimeout(() => {
+                activeContact.messages.push({...this.newResponse});
+            }, 1000);
         },
     },
     mounted(){
