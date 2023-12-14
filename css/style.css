@@ -246,6 +246,8 @@ body{
     background-color: #c3c3c3;
 }
 
+
+/* MEDIA QUERY */
 @media all and (max-width: 750px){
     #sidebar{
         min-width: 250px;
