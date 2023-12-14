@@ -1,9 +1,29 @@
 const {createApp} = Vue;
 
+function dataOdierna(){
+    const adesso = new Date();
+
+    // padStart aggiunge una cifra se voglio es.(7/11 diventa 07/11)
+    const giorno = adesso.getDate().toString().padStart(2, '0');
+    const mese = (adesso.getMonth() + 1).toString().padStart(2, '0');
+    const anno = adesso.getFullYear();
+
+    const ora = adesso.getHours().toString().padStart(2, '0');
+    const minuti = adesso.getMinutes().toString().padStart(2, '0');
+    const secondi = adesso.getSeconds().toString().padStart(2, '0'); 
+
+    return `${giorno}/${mese}/${anno} ${ora}:${minuti}:${secondi}`;
+}
+
 createApp({
     data(){
         return{
             activeContact: 0,
+            newMessage: {
+                date: dataOdierna().toLocaleString(),
+                message: "",
+                status: "sent"
+            },
             contacts: [
                 {
                     name: 'Papà',
@@ -28,7 +48,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Matteo',
+                    name: 'Natti',
                     avatar: 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/8_avatar-256.png',
                     visible: true,
                     messages: [
@@ -72,7 +92,7 @@ createApp({
                     ],
                 },
                 {
-                    name: 'Natti',
+                    name: 'Matteo',
                     avatar: 'https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/2_avatar-256.png',
                     visible: true,
                     messages: [
@@ -112,7 +132,7 @@ createApp({
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            message: 'Ciao Claudia, hai novità?',
+                            message: 'Ciao Milena, hai novità?',
                             status: 'sent'
                         },
                         {
@@ -173,7 +193,12 @@ createApp({
     methods:{
         goToChat(i){
             this.activeContact = i;
-        }
+        },
+        showNewMessage(){
+            this.newMessage.date = dataOdierna();
+            this.contacts[this.activeContact].messages.push(this.newMessage);
+            this.newMessage = "";
+        },
     },
     mounted(){
 

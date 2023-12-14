@@ -77,120 +77,6 @@
                                 12:00
                             </div>
                         </div>
-
-                        <!-- <div class="chat-user">
-                            <div class="friend-chat">
-                                <div class="img-friend-container">
-                                    <img src="https://cdn.icon-icons.com/icons2/2468/PNG/512/user_icon_149329.png" alt="">
-                                </div>
-                                <div class="friend">
-                                    <div class="friend-name">
-                                        Michele
-                                    </div>
-                                    <div class="last-message">
-                                        Ultimo messaggio inviato
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="time-friend-chat">
-                                12:00
-                            </div>
-                        </div>
-
-                        <div class="chat-user">
-                            <div class="friend-chat">
-                                <div class="img-friend-container">
-                                    <img src="https://cdn.icon-icons.com/icons2/2468/PNG/512/user_icon_149329.png" alt="">
-                                </div>
-                                <div class="friend">
-                                    <div class="friend-name">
-                                        Michele
-                                    </div>
-                                    <div class="last-message">
-                                        Ultimo messaggio inviato
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="time-friend-chat">
-                                12:00
-                            </div>
-                        </div>
-
-                        <div class="chat-user">
-                            <div class="friend-chat">
-                                <div class="img-friend-container">
-                                    <img src="https://cdn.icon-icons.com/icons2/2468/PNG/512/user_icon_149329.png" alt="">
-                                </div>
-                                <div class="friend">
-                                    <div class="friend-name">
-                                        Michele
-                                    </div>
-                                    <div class="last-message">
-                                        Ultimo messaggio inviato
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="time-friend-chat">
-                                12:00
-                            </div>
-                        </div>
-
-                        <div class="chat-user">
-                            <div class="friend-chat">
-                                <div class="img-friend-container">
-                                    <img src="https://cdn.icon-icons.com/icons2/2468/PNG/512/user_icon_149329.png" alt="">
-                                </div>
-                                <div class="friend">
-                                    <div class="friend-name">
-                                        Michele
-                                    </div>
-                                    <div class="last-message">
-                                        Ultimo messaggio inviato
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="time-friend-chat">
-                                12:00
-                            </div>
-                        </div>
-
-                        <div class="chat-user">
-                            <div class="friend-chat">
-                                <div class="img-friend-container">
-                                    <img src="https://cdn.icon-icons.com/icons2/2468/PNG/512/user_icon_149329.png" alt="">
-                                </div>
-                                <div class="friend">
-                                    <div class="friend-name">
-                                        Michele
-                                    </div>
-                                    <div class="last-message">
-                                        Ultimo messaggio inviato
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="time-friend-chat">
-                                12:00
-                            </div>
-                        </div>
-
-                        <div class="chat-user">
-                            <div class="friend-chat">
-                                <div class="img-friend-container">
-                                    <img src="https://cdn.icon-icons.com/icons2/2468/PNG/512/user_icon_149329.png" alt="">
-                                </div>
-                                <div class="friend">
-                                    <div class="friend-name">
-                                        Michele
-                                    </div>
-                                    <div class="last-message">
-                                        Ultimo messaggio inviato
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="time-friend-chat">
-                                12:00
-                            </div>
-                        </div> -->
                     </div>
 
                 </div>
@@ -232,7 +118,7 @@
                     <!-- scrivi messaggio section -->
                     <div class="footer-int-chat">
                         <a href="#"><i class="fa-regular fa-face-smile text-icons"></i></a>
-                        <input class="new-message-input" type="text" placeholder="Scrivi un messaggio">
+                        <input class="new-message-input" type="text" placeholder="Scrivi un messaggio" v-model="newMessage.message" @keyup.enter="showNewMessage">
                         <a href="#"><i class="fa-solid fa-microphone text-icons"></i></a>
                     </div>
                 </div>
