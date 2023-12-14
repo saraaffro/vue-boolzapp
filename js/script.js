@@ -20,7 +20,7 @@ createApp({
         return{
             activeContact: 0,
             newMessage: {
-                date: dataOdierna().toLocaleString(),
+                date: dataOdierna(),
                 message: "",
                 status: "sent"
             },
@@ -196,8 +196,8 @@ createApp({
         },
         showNewMessage(){
             this.newMessage.date = dataOdierna();
-            this.contacts[this.activeContact].messages.push(this.newMessage);
-            this.newMessage = "";
+            this.contacts[this.activeContact].messages.push({...this.newMessage});
+            this.newMessage.message = "";
         },
     },
     mounted(){
