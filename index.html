@@ -59,7 +59,7 @@
 
                     <!-- chat user -->
                     <div class="chat-user-container">
-                        <div class="chat-user" v-for="(chat, i) in contacts" @click="goToChat(i)">
+                        <div class="chat-user" v-for="(chat, i) in contacts" @click="goToChat(i)" :class="activeContact === i ? 'active' : ''">
                             <div class="friend-chat">
                                 <div class="img-friend-container">
                                     <img :src="chat.avatar" :alt="chat.name">

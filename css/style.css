@@ -133,6 +133,7 @@ body{
     font-size: 12px;
     border-bottom: 1px solid lightgray;
     padding: 10px;
+    cursor: pointer;
 }
 
 .chat-user:hover{
@@ -243,7 +244,7 @@ body{
 
 /* classi js */
 .active{
-    background-color: #c3c3c3;
+    background-color: #dcdcdc;
 }
 
 
