@@ -68,13 +68,13 @@
                                     <div class="friend-name">
                                         {{chat.name}}
                                     </div>
-                                    <div class="last-message">
-                                        Ultimo messaggio inviato
+                                    <div class="last-message" v-if="chat.messages.length > 0">
+                                        {{chat.messages[chat.messages.length - 1].message}}
                                     </div>
                                 </div>
                             </div>
                             <div class="time-friend-chat">
-                                12:00
+                                {{chat.messages[chat.messages.length - 1].date}}
                             </div>
                         </div>
                     </div>
@@ -94,7 +94,7 @@
                                     {{contacts[activeContact].name}}
                                 </div>
                                 <div class="last-message">
-                                    Ultimo accesso oggi alle 12:00
+                                    Ultimo accesso {{contacts[activeContact].messages[contacts[activeContact].messages.length - 1].date}}
                                 </div>
                             </div>
                         </div>

@@ -204,6 +204,7 @@ createApp({
             this.newMessage.date = dataOdierna();
 
             const activeContact = this.contacts[this.activeContact];
+            
             activeContact.messages.push({...this.newMessage});
             this.newMessage.message = "";
 
