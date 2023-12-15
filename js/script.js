@@ -38,18 +38,18 @@ createApp({
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            message: 'Hai portato a spasso il cane?',
+                            message: 'Ci sei per cena?',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 15:50:00',
-                            message: 'Ricordati di stendere i panni',
-                            status: 'sent'
+                            message: 'Si, ma arrivo tardi perché mi fermo a fare aperitivo fuori con gli altri',
+                            status: 'received'
                         },
                         {
                             date: '10/01/2020 16:15:22',
-                            message: 'Tutto fatto!',
-                            status: 'received'
+                            message: 'Va bene, a dopo',
+                            status: 'sent'
                         }
                     ],
                 },
@@ -65,12 +65,12 @@ createApp({
                         },
                         {
                             date: '20/03/2020 16:30:55',
-                            message: 'Bene grazie! Stasera ci vediamo?',
+                            message: 'Bene, tu? Stasera ci vediamo?',
                             status: 'received'
                         },
                         {
                             date: '20/03/2020 16:35:00',
-                            message: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                            message: 'Sii vengo da te che giochiamo alla play!!',
                             status: 'sent'
                         }
                     ],
@@ -82,17 +82,17 @@ createApp({
                     messages: [
                         {
                             date: '28/03/2020 10:10:40',
-                            message: 'La Marianna va in campagna',
+                            message: 'Cenetta da me stasera?',
                             status: 'received'
                         },
                         {
                             date: '28/03/2020 10:20:10',
-                            message: 'Sicuro di non aver sbagliato chat?',
+                            message: 'Sisi, prendiamo la pizza?',
                             status: 'sent'
                         },
                         {
                             date: '28/03/2020 16:15:22',
-                            message: 'Ah scusa!',
+                            message: 'Yesss',
                             status: 'received'
                         }
                     ],
@@ -104,12 +104,12 @@ createApp({
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            message: 'Lo sai che ha aperto una nuova pizzeria?',
+                            message: 'Riesci a fare il pranzo oggi?',
                             status: 'sent'
                         },
                         {
                             date: '10/01/2020 15:50:00',
-                            message: 'Si, ma preferirei andare al cinema',
+                            message: 'Si, ma preparo una semplice pasta',
                             status: 'received'
                         }
                     ],
@@ -148,8 +148,13 @@ createApp({
                         },
                         {
                             date: '10/01/2020 15:51:00',
-                            message: 'Nessuna nuova, buona nuova',
+                            message: "L'esame è andato bene?",
                             status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:52:00',
+                            message: "🙃",
+                            status: 'received'
                         }
                     ],
                 },
@@ -177,12 +182,12 @@ createApp({
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            message: 'Ciao, andiamo a mangiare la pizza stasera?',
+                            message: 'Ci sei stasera per guardarci la nostra serie?',
                             status: 'received'
                         },
                         {
                             date: '10/01/2020 15:50:00',
-                            message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
+                            message: 'Ovvio',
                             status: 'sent'
                         },
                         {
