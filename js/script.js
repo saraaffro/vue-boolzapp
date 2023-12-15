@@ -29,6 +29,7 @@ createApp({
                 message: "Ok",
                 status: "received"
             },
+            searchContact: "",
             contacts: [
                 {
                     name: 'Papà',
@@ -210,6 +211,10 @@ createApp({
             setTimeout(() => {
                 activeContact.messages.push({...this.newResponse});
             }, 1000);
+        },
+        searchNames(){
+            return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchContact.toLowerCase()));
+            // prima estraggo tutti i nomi, poi li filtro in base a cosa scrivo nell'input (toLowerCase cerca anche se minuscole)
         },
     },
     mounted(){

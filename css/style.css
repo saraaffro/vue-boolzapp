@@ -16,7 +16,7 @@ body{
     margin: 20px auto;
     height: calc(100vh - 40px);
     display: flex;
-    z-index: 5;
+    overflow: hidden;
 }
 
 #sidebar{
@@ -121,10 +121,19 @@ body{
     margin-top: 5px;
 }
 
+.name-list{
+  padding: 10px 10px;
+ 
+}
+
+.name-list p{
+    margin-bottom: 0;
+}
+
 /* chats */
 .chat-user-container{
     overflow-y: auto;
-    height: calc(100% - 140px);
+    height: calc(100% - 138px);
 }
 
 .chat-user{
