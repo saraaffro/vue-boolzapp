@@ -216,6 +216,9 @@ createApp({
             return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchContact.toLowerCase()));
             // prima estraggo tutti i nomi, poi li filtro in base a cosa scrivo nell'input (toLowerCase cerca anche se minuscole)
         },
+        deleteMessage(index){
+            this.contacts[this.activeContact].messages.splice(index, 1);
+        }
     },
     mounted(){
 

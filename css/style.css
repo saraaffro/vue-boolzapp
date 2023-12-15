@@ -251,6 +251,29 @@ body{
     color: rgb(188, 187, 187);
 }
 
+.ms_dropdown{
+    position: absolute;
+    bottom: 15px;
+    right: 5px;
+}
+
+.ms_button{
+  --bs-btn-color: none;
+  --bs-btn-bg: none;
+  --bs-btn-border-color: none;
+  --bs-btn-hover-color: none;
+  --bs-btn-hover-bg: none;
+  --bs-btn-hover-border-color: none;
+  --bs-btn-focus-shadow-rgb: none;
+  --bs-btn-active-color: none;
+  --bs-btn-active-bg: none;
+  --bs-btn-active-border-color: none;
+  --bs-btn-active-shadow: none;
+  --bs-btn-disabled-color: none;
+  --bs-btn-disabled-bg: none;
+  --bs-btn-disabled-border-color: none;
+  color: lightgray;
+}
 /* classi js */
 .active{
     background-color: #dcdcdc;
