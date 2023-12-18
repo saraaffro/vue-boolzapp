@@ -59,7 +59,7 @@
 
                     <!-- chat user -->
                     <div class="chat-user-container">
-                        <div class="chat-user"  @click="goToChat(i)" :class="activeContact === i ? 'active' : ''" v-for="(chat, i) in searchNames()" :key="i">
+                        <div class="chat-user"  @click="goToChatFiltered(chat)" :class="activeContact === i ? 'active' : ''" v-for="(chat, i) in searchNames()" :key="i">
                             <div class="friend-chat">
                                 <div class="img-friend-container">
                                     <img :src="chat.avatar" :alt="chat.name">
@@ -94,7 +94,7 @@
                                     {{contacts[activeContact].name}}
                                 </div>
                                 <div class="last-message">
-                                    Ultimo accesso {{contacts[activeContact].messages[contacts[activeContact].messages.length - 1].date}}
+                                    Ultimo accesso il {{contacts[activeContact].messages[contacts[activeContact].messages.length - 1].date}}
                                 </div>
                             </div>
                         </div>

@@ -220,11 +220,27 @@ createApp({
         },
         searchNames(){
             return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchContact.toLowerCase()));
+            
             // prima estraggo tutti i nomi, poi li filtro in base a cosa scrivo nell'input (toLowerCase cerca anche se minuscole)
         },
         deleteMessage(index){
             this.contacts[this.activeContact].messages.splice(index, 1);
-        }
+        },
+        goToChatFiltered(contact){
+            // devo trovare l'indice del contatto nella lista completa dei contatti attraverso il suo nome
+            const indexInContactsArray = this.contacts.findIndex(c => c.name === contact.name);
+
+            // se l'indice è stato trovato nella lista completa dei contatti
+            if (indexInContactsArray !== -1) {
+                // imposto activeContact uguale all'indice del contatto trovato
+                this.activeContact = indexInContactsArray;
+            } else {
+                // se l'indice non è stato trovato imposto activeContact a 0
+                this.activeContact = 0;
+            }
+        
+            // findIndex è un metodo che viene utilizzato per cercare all'interno di un array un elemento e ne restituisce l'indice di ciò che soddisfa la condizione di ricerca. Se nessun elemento soddisfa la condizione, restituisce -1.
+        } 
     },
     mounted(){
 
