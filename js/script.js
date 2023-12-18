@@ -247,7 +247,10 @@ createApp({
         },
         deleteChatMessages(){
             this.contacts[this.activeContact].messages = [];
-        } 
+        },
+        deleteChat(i){
+           this.contacts.splice(i, 1);
+        }
     },
     mounted(){
 
