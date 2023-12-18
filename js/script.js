@@ -210,7 +210,7 @@ createApp({
 
             const activeContact = this.contacts[this.activeContact];
             
-            if(this.newMessage.message.length > 0){
+            if(this.newMessage.message.length > 0 && this.newMessage.message.trim().length > 0){
                 activeContact.messages.push({...this.newMessage});
                 this.newMessage.message = "";
 
