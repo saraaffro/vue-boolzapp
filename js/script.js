@@ -219,8 +219,15 @@ createApp({
                     activeContact.messages.push({...this.newResponse});
                 }, 1000);
             }
-
             // trim() rimuove gli spazi iniziali e finali dalla stringa. 
+
+            // scroll all'ultimo messaggio
+            this.$nextTick(() => {
+                const chatContainer = document.querySelector('.main-chat-section');
+                if (chatContainer) {
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
+                }
+            });
         },
         searchNames(){
             return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchContact.toLowerCase()));
@@ -249,7 +256,7 @@ createApp({
             this.contacts[this.activeContact].messages = [];
         },
         deleteChat(i){
-           this.contacts.splice(i, 1);
+            this.contacts.splice(i, 1);
         }
     },
     mounted(){
