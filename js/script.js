@@ -252,11 +252,26 @@ createApp({
         
             // findIndex è un metodo che viene utilizzato per cercare all'interno di un array un elemento e ne restituisce l'indice di ciò che soddisfa la condizione di ricerca. Se nessun elemento soddisfa la condizione, restituisce -1.
         },
-        deleteChatMessages(){
-            this.contacts[this.activeContact].messages = [];
+        deleteChatMessages(index){
+            this.contacts[index].messages = [];
         },
-        deleteChat(i){
-            this.contacts.splice(i, 1);
+        deleteChat(contact){
+            // ricavo l'indice del contatto nell'array dei contatti
+            const indiceListaContatto = this.contacts.findIndex(c => c === contact);
+            // controllo se l'indice del contatto è valido
+            if (indiceListaContatto !== -1) {
+                // rimuovo il contatto dall'array
+                this.contacts.splice(indiceListaContatto, 1);
+
+
+                if (this.contacts.length === 0) {
+                    // se non ci sono più contatti activeContact = 0
+                    this.activeContact = 0;
+                } else if (this.activeContact >= this.contacts.length) {
+                    // altrimenti aggiorno activeContact all'ultimo indice
+                    this.activeContact = this.contacts.length - 1;
+                }
+            }
         }
     },
     mounted(){
