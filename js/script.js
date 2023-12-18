@@ -210,13 +210,18 @@ createApp({
 
             const activeContact = this.contacts[this.activeContact];
             
-            activeContact.messages.push({...this.newMessage});
-            this.newMessage.message = "";
+            if(this.newMessage.message.length > 0){
+                activeContact.messages.push({...this.newMessage});
+                this.newMessage.message = "";
 
-            // nuovo messaggio dopo 1 secondo
-            setTimeout(() => {
-                activeContact.messages.push({...this.newResponse});
-            }, 1000);
+                // nuovo messaggio dopo 1 secondo
+                setTimeout(() => {
+                    activeContact.messages.push({...this.newResponse});
+                }, 1000);
+            }
+            
+
+            
         },
         searchNames(){
             return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchContact.toLowerCase()));
