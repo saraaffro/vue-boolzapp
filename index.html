@@ -128,7 +128,8 @@
                     <div class="footer-int-chat">
                         <a href="#"><i class="fa-regular fa-face-smile text-icons"></i></a>
                         <input class="new-message-input" type="text" placeholder="Scrivi un messaggio" v-model="newMessage.message" @keyup.enter="showNewMessage">
-                        <a href="#"><i class="fa-solid fa-microphone text-icons"></i></a>
+                        <a href="#" v-if="newMessage.message.length === 0"><i class="fa-solid fa-microphone text-icons"></i></a>
+                        <a href="#" v-else @click="showNewMessage"><i class="fa-solid fa-paper-plane text-icons"></i></a>
                     </div>
                 </div>
             </div>

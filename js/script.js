@@ -219,9 +219,8 @@ createApp({
                     activeContact.messages.push({...this.newResponse});
                 }, 1000);
             }
-            
 
-            
+            // trim() rimuove gli spazi iniziali e finali dalla stringa. 
         },
         searchNames(){
             return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchContact.toLowerCase()));
