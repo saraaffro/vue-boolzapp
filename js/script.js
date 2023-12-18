@@ -244,6 +244,9 @@ createApp({
             }
         
             // findIndex è un metodo che viene utilizzato per cercare all'interno di un array un elemento e ne restituisce l'indice di ciò che soddisfa la condizione di ricerca. Se nessun elemento soddisfa la condizione, restituisce -1.
+        },
+        deleteChatMessages(){
+            this.contacts[this.activeContact].messages.splice();
         } 
     },
     mounted(){

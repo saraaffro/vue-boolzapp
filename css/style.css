@@ -257,6 +257,10 @@ body{
     right: 5px;
 }
 
+.ms_dropdown-chat{
+    display: inline;
+}
+
 .ms_button{
   --bs-btn-color: none;
   --bs-btn-bg: none;
@@ -273,6 +277,11 @@ body{
   --bs-btn-disabled-bg: none;
   --bs-btn-disabled-border-color: none;
   color: lightgray;
+}
+
+.ms_button-chat{
+    vertical-align: baseline;
+    padding: 0 5px;
 }
 /* classi js */
 .active{

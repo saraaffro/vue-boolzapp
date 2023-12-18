@@ -102,7 +102,14 @@
                         <div class="icons-container-user-section">
                             <a href="#"><i class="fa-solid fa-magnifying-glass user-icons"></i></a>
                             <a href="#"><i class="fa-solid fa-paperclip user-icons"></i></a>
-                            <a href="#"><i class="fa-solid fa-ellipsis-vertical user-icons"></i></a>
+                            <!-- importato da bootstrap -->
+                            <div class="dropdown ms_dropdown-chat">
+                                <a href="#" class="btn btn-secondary ms_button ms_button-chat" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis-vertical user-icons"></i></a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Delete all messages</a></li>
+                                  <li><a class="dropdown-item" href="#">Delete chat</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
