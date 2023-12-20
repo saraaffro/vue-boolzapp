@@ -217,6 +217,7 @@ createApp({
 
                 // nuovo messaggio dopo 1 secondo
                 setTimeout(() => {
+                    this.newResponse.date = dataOdierna();
                     activeContact.messages.push({...this.newResponse});
                     this.scrollChat();
                 }, 1000);
