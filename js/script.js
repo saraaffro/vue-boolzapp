@@ -213,21 +213,16 @@ createApp({
             if(this.newMessage.message.length > 0 && this.newMessage.message.trim().length > 0){
                 activeContact.messages.push({...this.newMessage});
                 this.newMessage.message = "";
+                this.scrollChat();
 
                 // nuovo messaggio dopo 1 secondo
                 setTimeout(() => {
                     activeContact.messages.push({...this.newResponse});
+                    this.scrollChat();
                 }, 1000);
             }
             // trim() rimuove gli spazi iniziali e finali dalla stringa. 
-
-            // scroll all'ultimo messaggio
-            this.$nextTick(() => {
-                const chatContainer = document.querySelector('.main-chat-section');
-                if (chatContainer) {
-                    chatContainer.scrollTop = chatContainer.scrollHeight;
-                }
-            });
+            
         },
         searchNames(){
             return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchContact.toLowerCase()));
@@ -272,6 +267,14 @@ createApp({
                     this.activeContact = this.contacts.length - 1;
                 }
             }
+        },
+        scrollChat(){
+            this.$nextTick(() => {
+                const chatContainer = document.querySelector('.main-chat-section');
+                if (chatContainer) {
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
+                }
+            });
         }
     },
     mounted(){
